@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "nostr-tools": "^1.5.0",
+    "pushover-notifications": "^1.2.2",
+    "websocket-polyfill": "^0.0.3"
+  },
+  "name": "nostr2pushover",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}
