@@ -38,6 +38,7 @@ async function main(){
     let eose = false;
     const pool = new nostr.SimplePool();
     const yourname = await getUserName(pool, nostr.nip19.decode(NOSTR_PUBLIC_KEY).data);
+    const yourPublicKey = nostr.nip19.decode(NOSTR_PUBLIC_KEY).data; // hex
     console.log(yourname);
 
     let sub = pool.sub(NOSTR_RELAYS, [{
@@ -46,6 +47,10 @@ async function main(){
     }]);
 
     sub.on('event', async event => {
+        //自分への返信は無視
+        if (event.pubkey === yourPublicKey) {
+            return;
+        }
         //Repostは無視
         if (event.content === "#[0]") {
             return;
