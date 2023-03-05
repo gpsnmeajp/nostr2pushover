@@ -1,4 +1,4 @@
-const NOSTR_RELAYS = JSON.parse(process.env.NOSTR_RELAYS) || ['wss://nos.lol', 'wss://relay.snort.social', 'wss://nostr.fediverse.jp'];
+const NOSTR_RELAYS = JSON.parse(process.env.NOSTR_RELAYS) || ['wss://relay.damus.io', 'wss://nos.lol', 'wss://relay.snort.social', 'wss://nostr.fediverse.jp'];
 const NOSTR_PUBLIC_KEY = process.env.NOSTR_PUBLIC_KEY || "******************************";
 
 // https://pushover.net/
