@@ -1,10 +1,10 @@
-const NOSTR_RELAYS = ['wss://nos.lol', 'wss://relay.snort.social', 'wss://nostr.fediverse.jp'];
-const NOSTR_PUBLIC_KEY = "******************************";
+const NOSTR_RELAYS = JSON.parse(process.env.NOSTR_RELAYS) || ['wss://nos.lol', 'wss://relay.snort.social', 'wss://nostr.fediverse.jp'];
+const NOSTR_PUBLIC_KEY = process.env.NOSTR_PUBLIC_KEY || "******************************";
 
 // https://pushover.net/
 // 1ヶ月あたり1万メッセージまで
-const PUSHOVER_TOKEN = "******************************";
-const PUSHOVER_USER = "******************************";
+const PUSHOVER_TOKEN = process.env.PUSHOVER_TOKEN;
+const PUSHOVER_USER = process.env.PUSHOVER_USER;
 
 var nostr = require('nostr-tools');
 var WebSocket = require('websocket-polyfill');
